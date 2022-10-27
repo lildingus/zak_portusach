@@ -1,15 +1,143 @@
-<html>
-    <head>
-       <style>
-        body {background-color:antiquewhite;}
-        #one {background-color:blueviolet; height:500 px;}
-       </style>
-    </head>
-    <body>
-        hi my name is zak
-        <br>
-        <a href="http://www.youtube.com">home</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ----p5---- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
+  <!-- ----p5---- -->
 
-        <div id="one"> this is one</div>
-    </body>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakary Portusach Portfolio</title>
+  <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.jpeg" class="logo">
+        
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Digital Media Artist<br>SJSU</p>
+        <h1><span>Zak</span> Portusach</h1>
+        
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<!-- -------about--------- -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/me.jpeg" style="width: 300px;">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p> My name is Zakary Portusach, I live in Campbell, CA, and I attend San Jose State University in pursuit of a BFA degree in the Digital Media Arts field.<br> Due to my upbringing being surrounded by skateboarding and other counter cultures, I have developed a style to let me do whatever I want, where I want, and how I want it; and I believe Digital Media Art is a catalyst for achieving this personal mantra.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('Education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="Skills">
+          <ul>
+            <li><span>3D Programs/ Modeling</span><br>Blender, Fusion 360</li>
+            <li><span>Web Development</span><br> HTML5, CSS3, Javascript</li>
+            <li><span>Creative Applications</span><br> Adobe Illustrator, Photoshop, InDesign, Primere, Audition</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Experience">
+          <ul>
+            <li><span>2014</span><br>Flipboard Inc. QA intern</li>
+            <li><span>2021 - Current</span><br> San Jose State University DMA program</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="Education">
+          <ul>
+            <li><span>2014 - 2018</span><br>De Anza College - Graphic Design</li>
+            <li><span>2021 - Current</span><br> San Jose State University - University Digital Media Arts program</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----portfolio---- -->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title"> My Work</h1>
+    <p>Click on each work to see more</p>
+
+    <div class="work-list">
+      <div class="work">
+        <img src="images/get_lost_map.png" style="width:300px;" >
+        <div class="layer">
+          <h3>What's going on?</h3>
+          <p>A road map to current violent issues</p>
+          <a href="whats_going_on.html" target="_blank"> <i class="fa-thin fa-link"> </i> </a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="images/glitch_swirl.jpg" style="width:300px;" >
+        <div class="layer">
+          <h3>Glitch Art</h3>
+          <p>Technical fun with images</p>
+          <a href="page2.html"><i class="fa-thin fa-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ---contact---- -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>zakary.portusach@sjsu.edu</p>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+  
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+  
+</body>
 </html>
